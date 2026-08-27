@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
-        android:label="Ear Pod Config"
-        android:theme="@style/Theme.EarPodConfig">
+        android:label="@string/app_name"
+        android:theme="@style/Theme.EarPodControl">
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

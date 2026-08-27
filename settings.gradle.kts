@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "EarPodConfig"
+rootProject.name = "EarPodControlApp"
 include(":app")

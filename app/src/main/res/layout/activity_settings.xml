@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settings_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/settings_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Demo-only options for QASuite test generation"
+            android:textColor="@color/secondary_text"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:id="@+id/settings_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="@drawable/bg_card">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/setting_firmware_update"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="start|center_vertical"
+                android:text="Ear Pod Firmware Update"
+                android:contentDescription="Ear Pod Firmware Update dummy setting"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/setting_app_update"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="start|center_vertical"
+                android:text="App Software Update"
+                android:contentDescription="App Software Update dummy setting"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/setting_permissions"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="start|center_vertical"
+                android:text="Manage Permissions"
+                android:contentDescription="Manage Permissions dummy setting"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/setting_user_info"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="start|center_vertical"
+                android:text="User Info"
+                android:contentDescription="User Info dummy setting"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/setting_device_info"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="start|center_vertical"
+                android:text="Device Information"
+                android:contentDescription="Device Information dummy setting"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/setting_notifications"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="start|center_vertical"
+                android:text="Notifications"
+                android:contentDescription="Notifications dummy setting"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/setting_privacy"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="start|center_vertical"
+                android:text="Privacy &amp; Diagnostics"
+                android:contentDescription="Privacy and Diagnostics dummy setting"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/setting_help"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="start|center_vertical"
+                android:text="Help &amp; Support"
+                android:contentDescription="Help and Support dummy setting"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/setting_about"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="start|center_vertical"
+                android:text="About"
+                android:contentDescription="About dummy setting"/>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_back_home"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="24dp"
+            android:text="Back to Device"
+            android:contentDescription="Back to device home screen"/>
+    </LinearLayout>
+</ScrollView>

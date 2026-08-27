@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PulsePods</string>
+    <string name="device_name">PulsePods Pro</string>
+    <string name="connected">Connected • 92%</string>
+    <string name="noise_control">Noise Control</string>
+    <string name="anc">ANC</string>
+    <string name="transparency">Transparency</string>
+    <string name="off">Off</string>
+    <string name="find_device">Find My Device</string>
+    <string name="touch_gestures">Touch Gestures</string>
+    <string name="equalizer">Equalizer</string>
+    <string name="spatial_audio">Spatial Audio</string>
+    <string name="wear_detection">Automatic Ear Detection</string>
+    <string name="settings">Settings</string>
+    <string name="current_mode_format">Current mode: %1$s</string>
+    <string name="anc_switch_desc">Noise control ANC mode switch</string>
+    <string name="transparency_switch_desc">Noise control Transparency mode switch</string>
+    <string name="off_switch_desc">Noise control Off mode switch</string>
+</resources>

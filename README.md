@@ -1,38 +1,74 @@
-# EarPodConfig
+# PulsePods / EarPod Control Demo App
 
-A simple single-screen Android demo application for ear pod configuration.
+A small Android application built specifically as a QASuite demo target.
 
-## Features
-- Active Noise Cancellation (ANC) toggle
-- Transparency toggle
-- ANC and Transparency are mutually exclusive
-- Ear pod visual
-- Left/right/case battery indicators
+## Functional scope to actually validate
+
+The real behavior is intentionally limited to the **Noise Control** selector:
+
+- ANC
+- Transparency
+- Off
+
+Only one mode can be active at a time. The current mode is displayed under the selector.
+
+## Dummy features
+
+The application exposes additional UI so QASuite can discover features and generate a much broader set of candidate test cases.
+
+Home screen:
 - Find My Device
 - Touch Gestures
-- Bluetooth Settings
+- Equalizer
+- Spatial Audio
+- Automatic Ear Detection
 
-## Tech Stack
-- Kotlin
-- Jetpack Compose
-- Material 3
+Settings:
+- Ear Pod Firmware Update
+- App Software Update
+- Manage Permissions
+- User Info
+- Device Information
+- Notifications
+- Privacy & Diagnostics
+- Help & Support
+- About
 
-## Run
-1. Open this folder in Android Studio.
-2. Allow Gradle sync to complete.
-3. Select an Android emulator or connected Android device.
-4. Click **Run**.
+These are currently demo-only and show a Toast message.
 
-Recommended minimum SDK: Android 8.0 / API 26.
+## Automation-friendly locators
 
-## Build APK
-From the project root:
+Important resource IDs:
 
-Windows:
-`gradlew.bat assembleDebug`
+- `btn_anc`
+- `btn_transparency`
+- `btn_off`
+- `current_mode`
+- `btn_settings`
+- `setting_firmware_update`
+- `setting_app_update`
+- `setting_permissions`
+- `setting_user_info`
+- `setting_about`
 
-macOS/Linux:
-`./gradlew assembleDebug`
+The important controls also have `contentDescription` values so Appium/UIAutomator/vision-assisted automation can locate them using accessibility attributes.
 
-The debug APK will be generated under:
-`app/build/outputs/apk/debug/app-debug.apk`
+## Android Studio
+
+1. Extract the ZIP.
+2. Open the extracted folder in Android Studio.
+3. Allow Gradle sync to complete.
+4. Use a device/emulator running Android 7.0/API 24 or later.
+5. Run the `app` configuration.
+
+## Instrumented tests
+
+Example Espresso tests are included in:
+
+`app/src/androidTest/java/com/qasuite/earpod/NoiseControlInstrumentedTest.kt`
+
+They cover ANC, Transparency, Off and mutual exclusivity.
+
+## Suggested QASuite demo story
+
+Let QASuite inspect the app and generate tests for all visible capabilities, then apply scope/priority/confidence filtering so the execution focuses on the three actual Noise Control modes. This makes the demo useful for showing that AI can distinguish discovered functionality from the intended regression scope.

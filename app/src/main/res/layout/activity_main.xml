@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/surface"
+    android:contentDescription="Ear pod configuration home screen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/device_name"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/connection_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/connected"
+            android:textColor="@color/success"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:id="@+id/device_visual_card"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/bg_device">
+
+            <ImageView
+                android:id="@+id/earpod_image"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:src="@drawable/ic_earbuds"
+                android:contentDescription="PulsePods Pro ear pod illustration"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/noise_control"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/noise_mode_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="@drawable/bg_card">
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switch_anc"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:paddingHorizontal="16dp"
+                android:text="@string/anc"
+                android:contentDescription="@string/anc_switch_desc"/>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switch_transparency"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:paddingHorizontal="16dp"
+                android:text="@string/transparency"
+                android:contentDescription="@string/transparency_switch_desc"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/current_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Current mode: Off"
+            android:textColor="@color/secondary_text"
+            android:textSize="14sp"
+            android:contentDescription="Current noise control mode"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Device Features"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/features_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="@drawable/bg_card">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_find_device"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="start|center_vertical"
+                android:text="@string/find_device"
+                android:contentDescription="Find My Device dummy feature"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_touch_gestures"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="start|center_vertical"
+                android:text="@string/touch_gestures"
+                android:contentDescription="Touch Gestures dummy feature"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_equalizer"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="start|center_vertical"
+                android:text="@string/equalizer"
+                android:contentDescription="Equalizer dummy feature"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_spatial_audio"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="start|center_vertical"
+                android:text="@string/spatial_audio"
+                android:contentDescription="Spatial Audio dummy feature"/>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switch_wear_detection"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:paddingHorizontal="16dp"
+                android:text="@string/wear_detection"
+                android:checked="true"
+                android:enabled="false"
+                android:contentDescription="Automatic Ear Detection dummy switch"/>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_settings"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="28dp"
+            android:text="@string/settings"
+            android:contentDescription="Open settings screen"/>
+    </LinearLayout>
+</ScrollView>
