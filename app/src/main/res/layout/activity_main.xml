@@ -82,14 +82,6 @@
                 android:text="@string/transparency"
                 android:contentDescription="@string/transparency_switch_desc"/>
 
-            <com.google.android.material.materialswitch.MaterialSwitch
-                android:id="@+id/switch_off"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:paddingHorizontal="16dp"
-                android:text="@string/off"
-                android:contentDescription="@string/off_switch_desc"/>
-
         </LinearLayout>
 
         <TextView

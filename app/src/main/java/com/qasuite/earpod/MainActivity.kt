@@ -12,8 +12,7 @@ class MainActivity : AppCompatActivity() {
 
     enum class NoiseMode(val label: String) {
         ANC("ANC"),
-        TRANSPARENCY("Transparency"),
-        OFF("Off")
+        TRANSPARENCY("Transparency")
     }
 
     private var currentMode: NoiseMode = NoiseMode.ANC
@@ -30,9 +29,6 @@ class MainActivity : AppCompatActivity() {
         }
         binding.switchTransparency.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) updateMode(NoiseMode.TRANSPARENCY)
-        }
-        binding.switchOff.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) updateMode(NoiseMode.OFF)
         }
 
         binding.btnFindDevice.setOnClickListener { dummy("Find My Device") }
@@ -52,7 +48,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.switchAnc.isChecked = mode == NoiseMode.ANC
         binding.switchTransparency.isChecked = mode == NoiseMode.TRANSPARENCY
-        binding.switchOff.isChecked = mode == NoiseMode.OFF
     }
 
     private fun dummy(feature: String) {
